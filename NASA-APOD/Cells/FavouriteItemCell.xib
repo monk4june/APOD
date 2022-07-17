@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="439" id="gR8-Du-xfx" customClass="FavouriteItemCell" customModule="NASA_APOD" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="611" height="439"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gR8-Du-xfx" id="QK2-2T-Ije">
+                <rect key="frame" x="0.0" y="0.0" width="611" height="439"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQG-Hf-Cbf">
+                        <rect key="frame" x="8" y="8" width="31.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="y7T-Yu-751"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBv-hm-7ve">
+                        <rect key="frame" x="8" y="37" width="595" height="51.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="5ZP-A1-uJ6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrf-Rf-tCY">
+                        <rect key="frame" x="555" y="0.0" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="rWt-ib-j8o"/>
+                            <constraint firstAttribute="height" constant="48" id="uUX-oW-O62"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="star.slash.fill" catalog="system"/>
+                        <connections>
+                            <action selector="removeButtonPressedWithSender:" destination="gR8-Du-xfx" eventType="touchUpInside" id="LB7-qa-WCo"/>
+                        </connections>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gAP-K2-JWc">
+                        <rect key="frame" x="8" y="96.5" width="595" height="334.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="gAP-K2-JWc" secondAttribute="height" multiplier="16:9" id="mcL-RW-dJr"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Jrf-Rf-tCY" firstAttribute="top" secondItem="QK2-2T-Ije" secondAttribute="top" id="2r7-Ec-ihj"/>
+                    <constraint firstItem="Jrf-Rf-tCY" firstAttribute="leading" secondItem="QK2-2T-Ije" secondAttribute="trailing" constant="-56" id="2tw-Jh-ao7"/>
+                    <constraint firstItem="cBv-hm-7ve" firstAttribute="top" secondItem="oQG-Hf-Cbf" secondAttribute="bottom" constant="8" id="6f4-wC-hjj"/>
+                    <constraint firstAttribute="trailing" secondItem="Jrf-Rf-tCY" secondAttribute="trailing" constant="8" id="An4-8g-viP"/>
+                    <constraint firstItem="cBv-hm-7ve" firstAttribute="leading" secondItem="QK2-2T-Ije" secondAttribute="leading" constant="8" id="CIX-6e-7Ts"/>
+                    <constraint firstItem="gAP-K2-JWc" firstAttribute="top" secondItem="cBv-hm-7ve" secondAttribute="bottom" constant="8" id="E8r-92-zbu"/>
+                    <constraint firstAttribute="trailing" secondItem="gAP-K2-JWc" secondAttribute="trailing" constant="8" id="K7a-LC-rVZ"/>
+                    <constraint firstAttribute="bottom" secondItem="gAP-K2-JWc" secondAttribute="bottom" constant="8" id="MmA-2B-67K"/>
+                    <constraint firstAttribute="trailing" secondItem="cBv-hm-7ve" secondAttribute="trailing" constant="8" id="ecJ-tk-Fus"/>
+                    <constraint firstItem="gAP-K2-JWc" firstAttribute="leading" secondItem="QK2-2T-Ije" secondAttribute="leading" constant="8" id="kaW-iy-ugp"/>
+                    <constraint firstItem="oQG-Hf-Cbf" firstAttribute="top" secondItem="QK2-2T-Ije" secondAttribute="top" constant="8" id="t4a-rc-36h"/>
+                    <constraint firstItem="oQG-Hf-Cbf" firstAttribute="leading" secondItem="QK2-2T-Ije" secondAttribute="leading" constant="8" id="zXp-Kd-gFR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="oQG-Hf-Cbf" id="DFm-pd-sdL"/>
+                <outlet property="mediaImageView" destination="gAP-K2-JWc" id="kaK-5v-YiK"/>
+                <outlet property="removeButton" destination="Jrf-Rf-tCY" id="L2I-9G-8hy"/>
+                <outlet property="titleLabel" destination="cBv-hm-7ve" id="P3M-PQ-33a"/>
+            </connections>
+            <point key="canvasLocation" x="-203.62318840579712" y="124.88839285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="star.slash.fill" catalog="system" width="128" height="116"/>
+    </resources>
+</document>

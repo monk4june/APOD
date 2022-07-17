@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--A.P.O.D.-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="Y6W-OH-hqX" customClass="SearchViewController" customModule="NASA_APOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Juc-jd-gn2">
+                                <rect key="frame" x="188.5" y="442.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemBlueColor"/>
+                            </activityIndicatorView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2db-dw-GrN">
+                                <rect key="frame" x="0.0" y="454" width="414" height="408"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jkk-wU-kwb">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <items>
+                                            <barButtonItem title="Search Media" id="X6h-3d-GIk">
+                                                <connections>
+                                                    <action selector="searchMediaButtonPressedWithSender:" destination="Y6W-OH-hqX" id="Ebu-Fa-gBZ"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="Gzo-qH-UfL"/>
+                                            <barButtonItem title="Close" image="xmark" catalog="system" id="vtR-Zb-6WB">
+                                                <connections>
+                                                    <action selector="closeDatePickerButtonPressedWithSender:" destination="Y6W-OH-hqX" id="7qx-AI-5Ex"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="dkc-8T-ce2">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="364"/>
+                                        <connections>
+                                            <action selector="datePickerValueChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="pZ6-Dv-H7O"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JIw-HS-IKy">
+                                <rect key="frame" x="8" y="52" width="398" height="818"/>
+                                <connections>
+                                    <segue destination="e45-2Q-WHT" kind="embed" identifier="embedMediaDetail" id="iNf-rq-w8Y"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JIw-HS-IKy" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="8" id="6Lk-fz-f0A"/>
+                            <constraint firstItem="2db-dw-GrN" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="AmM-Bv-U9G"/>
+                            <constraint firstItem="2db-dw-GrN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GV2-7a-5hR"/>
+                            <constraint firstItem="2db-dw-GrN" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Kes-Mz-JYE"/>
+                            <constraint firstItem="Juc-jd-gn2" firstAttribute="centerX" secondItem="JIw-HS-IKy" secondAttribute="centerX" id="OjI-1B-5Td"/>
+                            <constraint firstItem="Juc-jd-gn2" firstAttribute="centerY" secondItem="JIw-HS-IKy" secondAttribute="centerY" id="dqa-8P-SEN"/>
+                            <constraint firstItem="JIw-HS-IKy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="fNZ-RI-7yo"/>
+                            <constraint firstItem="JIw-HS-IKy" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-8" id="gnW-2C-Wjy"/>
+                            <constraint firstItem="JIw-HS-IKy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="yhY-Bc-2Ug"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="A.P.O.D." id="M7C-at-Lp1"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="Juc-jd-gn2" id="B0V-wn-IJX"/>
+                        <outlet property="closeDatePickerButtonItem" destination="vtR-Zb-6WB" id="E9y-bn-rdl"/>
+                        <outlet property="dateInputStackView" destination="2db-dw-GrN" id="WfU-WA-r6z"/>
+                        <outlet property="datePickerView" destination="dkc-8T-ce2" id="eg5-6h-xNb"/>
+                        <outlet property="searchMediaButtonItem" destination="X6h-3d-GIk" id="cjL-i1-r89"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192.75362318840581" y="-31.473214285714285"/>
+        </scene>
+        <!--MediaDetail-->
+        <scene sceneID="css-0C-iTs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MediaDetail" id="e45-2Q-WHT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ieu-Ib-o9z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1035" y="-31"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

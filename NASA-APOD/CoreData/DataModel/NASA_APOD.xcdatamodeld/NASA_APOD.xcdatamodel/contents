@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="MediaItem" representedClassName="MediaItem" syncable="YES">
+        <attribute name="date" attributeType="String" defaultValueString="" spotlightIndexingEnabled="YES"/>
+        <attribute name="explanation" attributeType="String" defaultValueString=""/>
+        <attribute name="hdurl" attributeType="String" defaultValueString=""/>
+        <attribute name="isFavourite" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="mediaType" attributeType="String" defaultValueString=""/>
+        <attribute name="serviceVersion" attributeType="String" defaultValueString=""/>
+        <attribute name="title" attributeType="String" defaultValueString=""/>
+        <attribute name="url" attributeType="String" defaultValueString=""/>
+    </entity>
+    <elements>
+        <element name="MediaItem" positionX="-63" positionY="-18" width="128" height="149"/>
+    </elements>
+</model>
