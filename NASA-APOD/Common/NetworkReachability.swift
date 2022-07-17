@@ -15,7 +15,7 @@ class NetworkReachability {
     //MARK: - Initializers
 
     init() {
-        reachability = try? Reachability(hostname: Configuration.baseURL)
+        reachability = try? Reachability()
         startNotifier()
     }
 
